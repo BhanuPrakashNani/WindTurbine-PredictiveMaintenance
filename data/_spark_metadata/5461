@@ -1,0 +1,6 @@
+v1
+{"path":"file:///Users/bhanuprakash/Documents/Academics/Big%20Data/project/data/part-00000-6bf4e9aa-7858-409b-8e35-e19647b17d15-c000.csv","size":328,"isDir":false,"modificationTime":1703060194611,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///Users/bhanuprakash/Documents/Academics/Big%20Data/project/data/part-00001-84cda8ac-37f2-4a60-ac7c-7697d00de7cb-c000.csv","size":329,"isDir":false,"modificationTime":1703060194658,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///Users/bhanuprakash/Documents/Academics/Big%20Data/project/data/part-00002-11162100-b65f-4349-a5f9-2fef00994aa1-c000.csv","size":181,"isDir":false,"modificationTime":1703060194660,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///Users/bhanuprakash/Documents/Academics/Big%20Data/project/data/part-00003-e32d9be9-bd74-4971-a314-c1fc9683cdf8-c000.csv","size":331,"isDir":false,"modificationTime":1703060194658,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///Users/bhanuprakash/Documents/Academics/Big%20Data/project/data/part-00004-25c313e7-b827-4216-a57d-ae4a9f0d0d23-c000.csv","size":330,"isDir":false,"modificationTime":1703060194660,"blockReplication":1,"blockSize":33554432,"action":"add"}

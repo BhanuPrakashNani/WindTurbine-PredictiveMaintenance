@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Data Project</title>
+</head>
+<!-- <link rel="stylesheet" href="styles.css"> -->
+<body>
+    <div class="container">
+      <br><br><br>
+          <br><br><br>
+          
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem; height: 50 em;">
+                <div class="card-body">
+                  <h5 class="card-title">Turbine <span id="SN1">107601</span></h5>
+                  <p class="card-text text-right" style="text-align: right;">Status: <span id="status1"></span></p>
+                  <!-- <p class="card-text">Status <span id="status"></span></p>
+                  <p class="card-text">Maintenance: </p> -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vplModal">
+                    View 1 hour VPL logs
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rpmModal">
+                    View 1 hour RPM logs
+                  </button>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem; height: 50 em;">
+                <div class="card-body">
+                  <h5 class="card-title">Turbine <span id="SN2">107602</span></h5>
+                  <p class="card-text text-right" style="text-align: right;">Status: <span id="status2"></span></p>
+                  <!-- <p class="card-text">Status <span id="status"></span></p>
+                  <p class="card-text">Maintenance: </p> -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vplModal">
+                    View 1 hour VPL logs
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rpmModal">
+                    View 1 hour RPM logs
+                  </button>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem; height: 50 em;">
+                <div class="card-body">
+                  <h5 class="card-title">Turbine <span id="SN3">107603</span></h5>
+                  <p class="card-text text-right" style="text-align: right;">Status: <span id="status3"></span></p>
+                  <!-- <p class="card-text">Status <span id="status"></span></p>
+                  <p class="card-text">Maintenance: </p> -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vplModal">
+                    View 1 hour VPL logs
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rpmModal">
+                    View 1 hour RPM logs
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 25rem; height: 50 em;">
+                <div class="card-body">
+                  <h5 class="card-title">Turbine <span id="SN4">107604</span></h5>
+                  <p class="card-text text-right" style="text-align: right;">Status: <span id="status4"></span></p>
+                  <!-- <p class="card-text">Status <span id="status"></span></p>
+                  <p class="card-text">Maintenance: </p> -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vplModal">
+                    View 1 hour VPL logs
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rpmModal">
+                    View 1 hour RPM logs
+                  </button>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 25rem; height: 50 em;">
+                <div class="card-body">
+                  <h5 class="card-title">Turbine <span id="SN5">107605</span></h5>
+                  <p class="card-text text-right" style="text-align: right;">Status: <span id="status5"></span></p>
+                  <!-- <p class="card-text">Status <span id="status"></span></p>
+                  <p class="card-text">Maintenance: </p> -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vplModal">
+                    View 1 hour VPL logs
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rpmModal">
+                    View 1 hour RPM logs
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br><br><br>
+                  <!-- Modal -->
+                  <div class="modal fade" id="rpmModal" tabindex="-1" aria-labelledby="rpmModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="rpmModalLabel">RPM</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="card-text">
+                            <canvas id="rpmChart"></canvas>
+                          </div>          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="vplModal" tabindex="-1" aria-labelledby="vplModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="vplModalLabel">Voltage, Power, Line Resistance</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="card-text">
+                            <canvas id="vplChart"></canvas>
+                          </div>            
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+  $(document).ready(function () {
+      function updateData() {
+          $.ajax({
+              url: '/latest_data',
+              type: 'GET',
+              dataType: 'json',
+              success: function (data) {
+                  // Update the HTML content with the latest data
+                  $('#SN').text(data['SN']);
+                  if(data['Turbine status'] == 0){
+                    $('#status1').text("Good");
+                    $('#status2').text("Bad");
+                    $('#status3').text("Starting");
+                    $('#status4').text("Stopping");
+                    $('#status5').text("Good");
+                  }else if(data['Turbine status'] == 1){
+                    $('#status').text("Good");
+                    $('#status2').text("Bad");
+                    $('#status3').text("Bad");
+                    $('#status4').text("Good");
+                    $('#status5').text("Bad");
+                  }
+                  else if(data['Turbine status'] == 2){
+                    $('#status1').text("Good");
+                    $('#status2').text("Starting");
+                    $('#status3').text("Starting");
+                    $('#status4').text("Starting");
+                    $('#status5').text("Bad");
+                  }
+                  else if(data['Turbine status'] == 3){
+                    $('#status1').text("Stopping");
+                    $('#status2').text("Stopping");
+                    $('#status3').text("Overheating");
+                    $('#status4').text("Stopping");
+                    $('#status5').text("Overheating");
+                  }
+                  else if(data['Turbine status'] == 4){
+                    $('#status1').text("Low Wind Speed");
+                    $('#status2').text("High Wind Speed");
+                    $('#status3').text("Low Wind Speed");
+                    $('#status4').text("High Wind Speed");
+                    $('#status5').text("Low Wind Speed");
+                  }
+                  else if(data['Turbine status'] == 5){
+                    $('#status1').text("Low Wind Speed");
+                    $('#status2').text("High Wind Speed");
+                    $('#status3').text("High Wind Speed");
+                    $('#status4').text("Low Wind Speed");
+                    $('#status5').text("High Wind Speed");
+                  }
+                  else if(data['Turbine status'] == 6){
+                    $('#status1').text("Standby");
+                    $('#status2').text("Standby");
+                    $('#status3').text("Idle");
+                    $('#status4').text("Standby");
+                    $('#status5').text("Standby");
+                  }
+                  else if(data['Turbine status'] == 7){
+                    $('#status1').text("Idle");
+                    $('#status2').text("Idle");
+                    $('#status3').text("Standby");
+                    $('#status4').text("Idle");
+                    $('#status5').text("Idle");
+                  }
+                  else if(data['Turbine status'] == 8){
+                    $('#status1').text("Emergency Stop");
+                    $('#status2').text("Overheating");
+                    $('#status3').text("Overheating");
+                    $('#status4').text("Emergency Stop");
+                    $('#status5').text("Emergency Stop");
+                  }
+                  else if(data['Turbine status'] == 9){
+                    $('#status1').text("Emergency Stop");
+                    $('#status2').text("Emergency Stop");
+                    $('#status3').text("Emergency Stop");
+                    $('#status4').text("Emergency Stop");
+                    $('#status5').text("Emergency Stop");
+                  }
+              },
+              error: function (error) {
+                  console.log('Error fetching data:', error);
+              }
+          });
+      }
+      // Initial update
+      updateData();
+
+      // Schedule updates every 5 seconds
+      setInterval(updateData, 5000);
+  });
+  </script>
+
+
+  <script>
+  // var letters = [];
+  let myChart1 = null;
+  let myChart2 = null;
+  $(document).ready(function () {
+      function updatePlotData() {
+          $.ajax({
+              url: '/latest_plot_data',
+              type: 'GET',
+              dataType: 'json',
+              success: function (data) {
+                console.log(data);
+                if(myChart2 != null){
+                  myChart2.destroy();
+                };
+                if(myChart1 != null){
+                  myChart1.destroy();
+                };
+                const rpm_ctx = document.getElementById('rpmChart');
+                const vpl_ctx = document.getElementById('vplChart');
+                var labels = [];
+                var rpm_data = [];
+                var ramp_rpm_data = [];
+                var voltage_data = [];
+                var power_data = [];
+                var line_resistance_data = [];
+                for (const element of data) {
+                  labels.push(element["Log Time"]);
+                  rpm_data.push(element["RPM"]);
+                  ramp_rpm_data.push(element["Ramp RPM"]);
+                  voltage_data.push(element["Voltage In"]);
+                  power_data.push(element["Power out"]);
+                  line_resistance_data.push(element["Line Resistance"]);
+                }
+                myChart1 = new Chart(rpm_ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'RPM', // Name the series
+                        data: rpm_data, // Specify the data values plot_data
+                        fill: false,
+                        borderColor: '#2196f3', // Add custom color border (Line)
+                        backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                        borderWidth: 1 // Specify bar border width
+                    },
+                              {
+                        label: 'Ramp RPM', // Name the series
+                        data: ramp_rpm_data, // Specify the data values array
+                        fill: false,
+                        borderColor: '#4CAF50', // Add custom color border (Line)
+                        backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
+                        borderWidth: 1 // Specify bar border width
+                    }]
+                },
+                options: {
+                  responsive: true, // Instruct chart js to respond nicely.
+                  maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height 
+                  scales: {
+                    x: {
+                      title: {
+                        display: true,
+                        text: 'Log Times'
+                      }
+                    },
+                    y: {
+                      title: {
+                        display: true,
+                        text: 'Data'
+                      }
+                    }
+                  }    
+                }
+              });
+                myChart2 = new Chart(vpl_ctx, {
+                  type: 'line',
+                  data: {
+                      labels: labels,
+                      datasets: [{
+                          label: 'Voltage In', // Name the series
+                          data: voltage_data, // Specify the data values plot_data
+                          fill: false,
+                          borderColor: '#2196f3', // Add custom color border (Line)
+                          backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                          borderWidth: 1 // Specify bar border width
+                      },
+                        {
+                          label: 'Power Out', // Name the series
+                          data: power_data, // Specify the data values array
+                          fill: false,
+                          borderColor: '#4CAF50', // Add custom color border (Line) 
+                          backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
+                          borderWidth: 1 // Specify bar border width
+                      },
+                      {
+                          label: 'Line Resistance', // Name the series
+                          data: line_resistance_data, // Specify the data values array
+                          fill: false,
+                          borderColor: '#FF3345', // Add custom color border (Line) FF3345
+                          backgroundColor: '#FF3345', // Add custom color background (Points and Fill)
+                          borderWidth: 1 // Specify bar border width
+                      }]
+                  },
+                  options: {
+                    responsive: true, // Instruct chart js to respond nicely.
+                    maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height 
+                    scales: {
+                    x: {
+                      title: {
+                        display: true,
+                        text: 'Log Times'
+                      }
+                    },
+                    y: {
+                      title: {
+                        display: true,
+                        text: 'Data'
+                      }
+                    }
+                  }
+                  }
+              });
+              },
+              error: function (error) {
+                  console.log('Error fetching data:', error);
+              }
+          });
+      }
+      // Initial update
+      updatePlotData();
+
+      // Schedule updates every 5 seconds
+      setInterval(updatePlotData, 5000);
+  });
+  </script>
+  <script>
+//   var labels = [];
+//   var rpm_data = [];
+//   var ramp_rpm_data = [];
+//   var windspeed_data = [];
+//   var voltage_data = [];
+//   var power_data = [];
+//   var line_resistance_data = [];
+//   const rpm_ctx = document.getElementById('rpmChart');
+//   const vpl_ctx = document.getElementById('vplChart');
+//   for (let index = 0; index < letters.length; index++) {
+//     const element = letters[index];
+//     labels.push(element["Log Time"]);
+//     rpm_data.push(element["RPM"]);
+//     ramp_rpm_data.push(element["Ramp RPM"]);
+//     voltage_data.push(element["Voltage In"]);
+//     power_data.push(element["Power out"]);
+//     line_resistance_data.push(element["Line Resistance"]);
+//   }
+//   var myChart = new Chart(rpm_ctx, {
+//     type: 'line',
+//     data: {
+//         labels: labels,
+//         datasets: [{
+//             label: 'test RPM', // Name the series
+//             data: rpm_data, // Specify the data values plot_data
+//             fill: false,
+//             borderColor: '#2196f3', // Add custom color border (Line)
+//             backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+//             borderWidth: 1 // Specify bar border width
+//         },
+//                   {
+//             label: 'Ramp RPM', // Name the series
+//             data: ramp_rpm_data, // Specify the data values array
+//             fill: false,
+//             borderColor: '#4CAF50', // Add custom color border (Line)
+//             backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
+//             borderWidth: 1 // Specify bar border width
+//         }]
+//     },
+//     options: {
+//       responsive: true, // Instruct chart js to respond nicely.
+//       maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+//     }
+// });
+</script>
